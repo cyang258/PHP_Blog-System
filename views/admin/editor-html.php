@@ -34,7 +34,11 @@ return "
 <script type='text/javascript'>
 tinymce.init({
     selector: 'textarea',
-    plugins: 'image'
+    plugins: 'image',
+    setup: function (editor) {
+        editor.on ('change', function (e) {
+            updateEditorMessage();
+}); }
  });
 </script>		
 ";
