@@ -1,3 +1,19 @@
+function checkLoginRequiredField(event){
+	var email = document.querySelector("input[name='email']");
+	var password = document.querySelector("input[name='password']");
+	var emailWarning = document.querySelector("form #email-warning");
+	var passwordWarning = document.querySelector("form #password-warning");
+	if(email.value === ""){
+		event.preventDefault();
+		emailWarning.innerHTML = "*You must enter email!";
+	}
+
+	if(password.value === ""){
+		event.preventDefault();
+		passwordWarning.innerHTML = "*You must enter password!"; 
+	}
+}
+
 function checkTitle(event){
 	var title = document.querySelector("input[name='title']");
 	var warning = document.querySelector("form #title-warning");
